@@ -6,8 +6,36 @@ permalink: /about/
 
 ## Current gig
 
-Data Analyst @ **[ozon.ru](https://ozon.ru)** [^1].
+Senior Data Analyst @ **[ozon.ru](https://ozon.ru)** [^1].
+
 [^1]: :top: ecommerce marketplace in CIS (and possibly Europe)
+
+
+---
+## Stuff I'm not bad at
+
+* Pandas, SQL & other data-crunching
+
+* data-viz
+
+* Analytics + Tracing/Observability
+
+* ML
+
+* googling stuff
+
+* stack-overflow
+
+* bullshit-bingo (git, docker, k8s deployement, )
+
+---
+## Stuff I want to be better at
+
+* DL
+
+* fast.ai
+
+* JuliaLang
 
 
 ---
