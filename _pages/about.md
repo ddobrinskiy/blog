@@ -39,9 +39,9 @@ Senior Data Analyst @ **[ozon.ru](https://ozon.ru)** [^1].
 
 * fast.ai
 
-* JuliaLang [^j]
+* JuliaLang [^11]
 
-[j]: because why not
+[11]: because why not
 
 
 ---
@@ -49,7 +49,7 @@ Senior Data Analyst @ **[ozon.ru](https://ozon.ru)** [^1].
 
 Hit me up on 
 
-* twitter [^2][@daviddobrinskiy](https://twitter.com/daviddobrinskiy)
+* twitter [^2] [@daviddobrinskiy](https://twitter.com/daviddobrinskiy)
 
 [^2]: There were some angry rants there, but I don't want to get cancelled by some angry mob of offended Z-gens several years down the line. So no witty irreverent humour anymore, sorry
 
