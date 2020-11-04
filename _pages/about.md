@@ -14,6 +14,10 @@ Senior Data Analyst @ **[ozon.ru](https://ozon.ru)** [^1].
 ---
 ## Stuff I'm not bad at
 
+* python
+
+* golang
+
 * Pandas, SQL & other data-crunching
 
 * data-viz
@@ -35,7 +39,9 @@ Senior Data Analyst @ **[ozon.ru](https://ozon.ru)** [^1].
 
 * fast.ai
 
-* JuliaLang
+* JuliaLang [^j]
+
+[j]: because why not
 
 
 ---
