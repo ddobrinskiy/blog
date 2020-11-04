@@ -1,0 +1,73 @@
+<h1 id="chaper-than-starbucks-gpu">chaper-than Starbucks GPU</h1>
+
+<p><strong>This post is a work-in-progress</strong></p>
+
+<ol id="markdown-toc">
+  <li><a href="#chaper-than-starbucks-gpu" id="markdown-toc-chaper-than-starbucks-gpu">chaper-than Starbucks GPU</a>    <ol>
+      <li><a href="#renting-your-gpu" id="markdown-toc-renting-your-gpu">Renting your GPU</a></li>
+      <li><a href="#personalizing-your-development-environment" id="markdown-toc-personalizing-your-development-environment">Personalizing your development environment</a></li>
+      <li><a href="#going-beyond-customized-docker-image" id="markdown-toc-going-beyond-customized-docker-image">Going beyond: customized docker image</a>        <ol>
+          <li><a href="#option-1-build-it-yourself" id="markdown-toc-option-1-build-it-yourself">Option 1: Build it yourself</a></li>
+          <li><a href="#option-2-let-github-build-it-for-you---for-free" id="markdown-toc-option-2-let-github-build-it-for-you---for-free">Option 2: Let github build it for you - for free!</a></li>
+          <li><a href="#option-3-pull-my-image-and-customize-it-via-terminal" id="markdown-toc-option-3-pull-my-image-and-customize-it-via-terminal">Option 3: Pull my image and customize it via terminal</a></li>
+        </ol>
+      </li>
+      <li><a href="#setting-up-github-access" id="markdown-toc-setting-up-github-access">Setting up github access</a></li>
+      <li><a href="#setting-up-kaggle-cli" id="markdown-toc-setting-up-kaggle-cli">setting up kaggle cli</a></li>
+      <li><a href="#setting-up-mlflow-ui" id="markdown-toc-setting-up-mlflow-ui">setting up mlflow ui</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="renting-your-gpu">Renting your GPU</h2>
+
+<p><a href="https://www.paperspace.com/">paperspace.com</a> provides cheap on-demand GPU instances.</p>
+
+<h2 id="personalizing-your-development-environment">Personalizing your development environment</h2>
+
+<p>opend terminal and hack away, you are root anyway. Here are some examples of what you can do with a terminal</p>
+
+<ul>
+  <li>
+    <p>setup ZSH with Powerlevel10k for a <strong>MUCH</strong> better terminal experience</p>
+  </li>
+  <li>
+    <p>install vim to jupyterlab</p>
+  </li>
+  <li>
+    <p>pip install stuff</p>
+  </li>
+  <li>
+    <p>conda install stuff</p>
+  </li>
+</ul>
+
+<h2 id="going-beyond-customized-docker-image">Going beyond: customized docker image</h2>
+
+<p>What if you want the latest rapids, fastai, etc?</p>
+
+<p>Run your customized image!</p>
+
+<h3 id="option-1-build-it-yourself">Option 1: Build it yourself</h3>
+
+<h3 id="option-2-let-github-build-it-for-you---for-free">Option 2: Let github build it for you - for free!</h3>
+
+<p>You can refer to my image: https://github.com/ddobrinskiy/docker_deep_learning/</p>
+
+<p>Just add <code class="language-plaintext highlighter-rouge">DOCKERHUB_USERNAME</code> (your docker.com username, duh) and <code class="language-plaintext highlighter-rouge">DOCKERHUB_TOKEN</code> (your docker.com passpord) to the repo’s secrets.</p>
+
+<p>After it compiles, the image should be uploaded to https://hub.docker.com/u/{DOCKERHUB_USERNAME}/devbox</p>
+
+<p>If unsure, deep dive on this guide: https://github.com/marketplace/actions/build-and-push-docker-images</p>
+
+<h3 id="option-3-pull-my-image-and-customize-it-via-terminal">Option 3: Pull my image and customize it via terminal</h3>
+
+<p>Here you go, just use <code class="language-plaintext highlighter-rouge">daviddobr/devbox:latest</code> as <strong>condainer_name</strong>, and it should work right out of the box with <code class="language-plaintext highlighter-rouge">rapidsai==0.15</code> and <code class="language-plaintext highlighter-rouge">fastai==2.*</code> all setup and ready to go</p>
+
+<p>Oh, and don’t forget to replace <code class="language-plaintext highlighter-rouge">/tree</code> with <code class="language-plaintext highlighter-rouge">/lab</code> in the URL</p>
+
+<h2 id="setting-up-github-access">Setting up github access</h2>
+
+<h2 id="setting-up-kaggle-cli">setting up kaggle cli</h2>
+
+<h2 id="setting-up-mlflow-ui">setting up mlflow ui</h2>
