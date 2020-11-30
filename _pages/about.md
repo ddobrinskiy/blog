@@ -8,15 +8,13 @@ permalink: /about/
 
 Senior Data Analyst @ **[ozon.ru](https://ozon.ru)** [^1].
 
-[^1]: :top: ecommerce marketplace in CIS (and possibly Europe)
+[^1]: NASDAQ Listed, [MGIMO finished](https://pikabu.ru/story/otkuda_poshla_shutka_pro_mgimo_finishd_3923141), :top: ecommerce marketplace in CIS (and possibly Europe)
 
 
 ---
 ## Stuff I'm not bad at
 
 * python
-
-* golang
 
 * Pandas, SQL & other data-crunching
 
@@ -30,10 +28,12 @@ Senior Data Analyst @ **[ozon.ru](https://ozon.ru)** [^1].
 
 * stack-overflow
 
-* bullshit-bingo (git, docker, k8s deployement, )
+* bullshit-bingo (AI, git, docker, k8s deployement, teamwork, leadership, tbc)
 
 ---
 ## Stuff I want to be better at
+
+* golang
 
 * DL
 
@@ -51,7 +51,7 @@ Hit me up on
 
 * twitter [^2] [@daviddobrinskiy](https://twitter.com/daviddobrinskiy)
 
-[^2]: There were some angry rants there, but I don't want to get cancelled by some angry mob of offended Z-gens several years down the line. So no witty irreverent humour anymore, sorry
+[^2]: There were some angry rants there, but some people just can't take a joke. So no witty irreverent humour anymore, sorry
 
 
 * linkedin [^3] [@ddobrinskiy](https://www.linkedin.com/in/ddobrinskiy/) 
