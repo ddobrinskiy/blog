@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      6 min read
     
 </span></p>
 
@@ -128,7 +128,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Setting-up-your-environment-for-debugging">Setting up your environment for debugging </a></li>
 <li class="toc-entry toc-h2"><a href="#problem-1:-two-sum">problem 1: two-sum </a></li>
 <li class="toc-entry toc-h2"><a href="#2020-12-01-|-problem-2-|-add-two-numbers">2020-12-01 | problem 2 | add-two-numbers </a></li>
-<li class="toc-entry toc-h2"><a href="#[wip]---Maximum-Depth-of-Binary-Tree">[wip]   Maximum Depth of Binary Tree </a></li>
+<li class="toc-entry toc-h2"><a href="#week-1-|-Maximum-Depth-of-Binary-Tree">week 1 | Maximum Depth of Binary Tree </a></li>
+<li class="toc-entry toc-h2"><a href="#week-1-|-Linked-List-Random-Node">week 1 | Linked List Random Node </a></li>
 </ul>
 </li>
 </ul><!--
@@ -146,6 +147,12 @@ window.onload = wrap_img;
 <h1 id="Leetcode-december">
 <a class="anchor" href="#Leetcode-december" aria-hidden="true"><span class="octicon octicon-link"></span></a>Leetcode december<a class="anchor-link" href="#Leetcode-december"> </a>
 </h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Setting-up-your-environment-for-debugging">
 <a class="anchor" href="#Setting-up-your-environment-for-debugging" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up your environment for debugging<a class="anchor-link" href="#Setting-up-your-environment-for-debugging"> </a>
 </h2>
@@ -217,7 +224,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
 </pre></div>
 
     </div>
@@ -235,7 +242,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">twoSumBrute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
         <span class="k">for</span> <span class="n">idx_l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
             <span class="k">for</span> <span class="n">idx_r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">idx_l</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
@@ -249,6 +256,8 @@ Only one valid answer exists.</code></pre>
                 <span class="k">return</span> <span class="n">i</span><span class="p">,</span> <span class="n">lookup</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">v</span><span class="p">]</span>
             <span class="n">lookup</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Two sums target not in list.'</span><span class="p">)</span>
+            
+            
 </pre></div>
 
     </div>
@@ -285,7 +294,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
 
 <span class="c1"># Definition for singly-linked list.</span>
 <span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
@@ -336,7 +345,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">number_from_ListNode</span><span class="p">(</span><span class="n">list_node</span><span class="p">,</span> <span class="n">vrb</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">number_from_ListNode</span><span class="p">(</span><span class="n">list_node</span><span class="p">,</span> <span class="n">vrb</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">current</span> <span class="o">=</span> <span class="n">list_node</span>
 
@@ -365,7 +374,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l1</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">l2</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
         <span class="n">int1</span> <span class="o">=</span> <span class="n">number_from_ListNode</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span>
         <span class="n">int2</span> <span class="o">=</span> <span class="n">number_from_ListNode</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
@@ -393,7 +402,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">run_example</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">run_example</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -426,7 +435,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">run_example</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">run_example</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -459,7 +468,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">run_example</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">run_example</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -488,8 +497,8 @@ Only one valid answer exists.</code></pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="[wip]---Maximum-Depth-of-Binary-Tree">
-<a class="anchor" href="#%5Bwip%5D---Maximum-Depth-of-Binary-Tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>[wip]   Maximum Depth of Binary Tree<a class="anchor-link" href="#%5Bwip%5D---Maximum-Depth-of-Binary-Tree"> </a>
+<h2 id="week-1-|-Maximum-Depth-of-Binary-Tree">
+<a class="anchor" href="#week-1-%7C-Maximum-Depth-of-Binary-Tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>week 1 | Maximum Depth of Binary Tree<a class="anchor-link" href="#week-1-%7C-Maximum-Depth-of-Binary-Tree"> </a>
 </h2>
 <p><a href="https://leetcode.com/explore/challenge/card/december-leetcoding-challenge/569/week-1-december-1st-december-7th/3551/">https://leetcode.com/explore/challenge/card/december-leetcoding-challenge/569/week-1-december-1st-december-7th/3551/</a></p>
 <p>Details:</p>
@@ -512,7 +521,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">TreeNode</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">TreeNode</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">left</span>
@@ -526,6 +535,8 @@ Only one valid answer exists.</code></pre>
 <span class="s2">  /   \      </span>
 <span class="si">{</span><span class="n">vl</span><span class="si">}</span><span class="s2">    </span><span class="si">{</span><span class="n">vr</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">"""</span>
+        
+        
 </pre></div>
 
     </div>
@@ -542,7 +553,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span> 
     <span class="k">def</span> <span class="nf">maxDepthDeque</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
             <span class="n">queue</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="n">root</span><span class="p">]),</span> <span class="mi">0</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span> <span class="k">return</span> <span class="n">count</span>
@@ -588,7 +599,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">null</span> <span class="o">=</span> <span class="kc">None</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">null</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">root</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">null</span><span class="p">,</span><span class="n">null</span><span class="p">,</span><span class="n">null</span><span class="p">,</span><span class="n">null</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
 <span class="n">root</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">null</span><span class="p">,</span><span class="n">null</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
 </pre></div>
@@ -607,7 +618,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">vals</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vals</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -624,7 +635,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">global</span> <span class="n">node</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">global</span> <span class="n">node</span>
 <span class="n">node</span> <span class="o">=</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">vals</span><span class="p">))</span>
 </pre></div>
 
@@ -642,7 +653,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">better_next</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">better_next</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
@@ -663,7 +674,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="n">node</span><span class="p">:</span><span class="n">TreeNode</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="n">node</span><span class="p">:</span><span class="n">TreeNode</span><span class="p">):</span>
     <span class="n">vl</span> <span class="o">=</span> <span class="n">better_next</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
     <span class="n">vr</span> <span class="o">=</span> <span class="n">better_next</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
 
@@ -688,7 +699,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">build</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">build</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -705,7 +716,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">node</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">node</span>
 </pre></div>
 
     </div>
@@ -742,7 +753,7 @@ Only one valid answer exists.</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">maxDepthDeque</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">maxDepthRec</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">maxDepthDeque</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">maxDepthRec</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -758,6 +769,240 @@ Only one valid answer exists.</code></pre>
 
 <div class="output_text output_subarea output_execute_result">
 <pre>(3, 3)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="week-1-|-Linked-List-Random-Node">
+<a class="anchor" href="#week-1-%7C-Linked-List-Random-Node" aria-hidden="true"><span class="octicon octicon-link"></span></a>week 1 | Linked List Random Node<a class="anchor-link" href="#week-1-%7C-Linked-List-Random-Node"> </a>
+</h2>
+<p><a href="https://leetcode.com/explore/challenge/card/december-leetcoding-challenge/569/week-1-december-1st-december-7th/3552/">https://leetcode.com/explore/challenge/card/december-leetcoding-challenge/569/week-1-december-1st-december-7th/3552/</a></p>
+<p><strong>Performance</strong>: Your runtime beats 47.34 % of python3 submissions.
+</p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>Faster solutions populate a list and the choose randomly from it. Below is the fastest implementation using a fixed amount of memory
+</div>
+<strong>Problem definition</strong>:
+<p>Given a singly linked list, return a random node's value from the linked list. Each node must have the same probability of being chosen.</p>
+<p><strong>Follow up:</strong></p>
+<p>What if the linked list is extremely large and its length is unknown to you? Could you solve this efficiently without using extra space?</p>
+<p><strong>Example:</strong></p>
+
+<pre><code>// Init a singly linked list [1,2,3].
+ListNode head = new ListNode(1);
+head.next = new ListNode(2);
+head.next.next = new ListNode(3);
+Solution solution = new Solution(head);
+
+// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.
+solution.getRandom();</code></pre>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">next</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="nb">next</span>
+        
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">val</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">next</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+        
+    <span class="k">def</span> <span class="nf">show_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span>
+        
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+            <span class="k">if</span> <span class="n">current</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">):</span>
+        <span class="sd">"""</span>
+<span class="sd">        @param head The linked list's head.</span>
+<span class="sd">        Note that the head is guaranteed to be not null, so it contains at least one node.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="o">=</span> <span class="n">head</span>
+        
+    <span class="k">def</span> <span class="nf">depth</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        return linked list's depth</span>
+<span class="sd">        """</span>
+        <span class="n">cntr</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">cntr</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">cntr</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+        
+    <span class="k">def</span> <span class="nf">get_val</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        @param idx The index of node to get value from</span>
+<span class="sd">        """</span>
+        <span class="n">cntr</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">cntr</span><span class="o">==</span><span class="n">idx</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">idx</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">val</span>
+
+            <span class="n">cntr</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"idx=</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2"> is larger than linked list size of </span><span class="si">{</span><span class="n">cntr</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+
+    <span class="k">def</span> <span class="nf">getRandom</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">"""</span>
+<span class="sd">        Returns a random node's value.</span>
+<span class="sd">        """</span>
+        
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depth</span><span class="p">()</span>
+        <span class="n">idx_rand</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+        <span class="n">idx</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_val</span><span class="p">(</span><span class="n">idx_rand</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">idx_rand</span> <span class="o">==</span> <span class="n">idx</span>
+        <span class="k">return</span> <span class="n">val</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">head</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">head</span><span class="o">.</span><span class="n">show_all</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">Solution</span><span class="p">(</span><span class="n">head</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="o">%</span><span class="k">time</span> pd.Series([obj.getRandom() for _ in range(50_000)]).value_counts(normalize=True).sort_index().round(2)
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 151 ms, sys: 0 ns, total: 151 ms
+Wall time: 149 ms
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1    0.17
+2    0.17
+3    0.17
+4    0.17
+5    0.17
+6    0.17
+dtype: float64</pre>
 </div>
 
 </div>
