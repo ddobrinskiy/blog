@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Day 1 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Day 1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://ddobrinskiy.github.io/blog/2021/02/04/Advent-Of-Code.html" />
+<meta property="og:url" content="https://ddobrinskiy.github.io/blog/2021/02/04/Advent-Of-Code.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-04T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","url":"https://ddobrinskiy.github.io/blog/2021/02/04/Advent-Of-Code.html","@type":"BlogPosting","headline":"Day 1","dateModified":"2021-02-04T00:00:00-06:00","datePublished":"2021-02-04T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ddobrinskiy.github.io/blog/2021/02/04/Advent-Of-Code.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ddobrinskiy.github.io/blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Day 1</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-02-04T00:00:00-06:00" itemprop="datePublished">
+        Feb 4, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      16 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/ddobrinskiy/blog/tree/master/_notebooks/2021-01-01 Advent Of Code.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/ddobrinskiy/blog/master?filepath=_notebooks%2F2021-01-01+Advent+Of+Code.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/ddobrinskiy/blog/blob/master/_notebooks/2021-01-01 Advent Of Code.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-01-01 Advent Of Code.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-1">Part 1<a class="anchor-link" href="#Part-1"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">r</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://filebin.net/qjkb2njdu0gl7kxz/input.txt?t=kjulapu7&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">nums</span><span class="p">))</span>
+<span class="n">nums</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;-----&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">main_two</span><span class="p">():</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="p">]</span>
+<span class="c1">#             print(a,b, a+b)</span>
+            <span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">2020</span><span class="p">:</span>
+                <span class="k">break</span> <span class="c1"># break J</span>
+            <span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="o">==</span>  <span class="mi">2020</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+            
+<span class="n">main_two</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">main_three</span><span class="p">():</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">a</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="p">]</span>
+                
+                <span class="c1"># iterate from middle(n//2) to +1, -1, +2, -2, and so on</span>
+                <span class="n">idx_middle</span> <span class="o">=</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span><span class="o">//</span><span class="mi">2</span>
+                <span class="n">c</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">idx_middle</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span>
+                
+<span class="n">main_three</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Day-2">Day 2<a class="anchor-link" href="#Day-2"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">valid_pass</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">MIN</span><span class="p">,</span> <span class="n">MAX</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">pwd</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-| |: &#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        <span class="n">MIN</span><span class="p">,</span> <span class="n">MAX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">MIN</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">MAX</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">MIN</span> <span class="o">&lt;=</span> <span class="n">pwd</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">MAX</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/advent_of_code/2020/day2.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="n">cnt</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">valid_pass</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">line</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="n">cnt</span> <span class="o">+=</span> <span class="n">valid_pass</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">cnt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">valid_pass</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">pwd</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-| |: &#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">pwd</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="n">pwd</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/advent_of_code/2020/day2.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="n">cnt</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">valid_pass</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">line</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="n">cnt</span> <span class="o">+=</span> <span class="n">valid_pass</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">cnt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Day-3">Day 3<a class="anchor-link" href="#Day-3"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;..##.......</span>
+<span class="s2">#...#...#..</span>
+<span class="s2">.#....#..#.</span>
+<span class="s2">..#.#...#.#</span>
+<span class="s2">.#...##..#.</span>
+<span class="s2">..#.##.....</span>
+<span class="s2">.#.#.#....#</span>
+<span class="s2">.#........#</span>
+<span class="s2">#.##...#...</span>
+<span class="s2">#...##....#</span>
+<span class="s2">.#..#...#.#&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+<span class="n">sarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">sarr</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sarr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">n_steps</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">sarr</span><span class="p">]</span><span class="o">*</span><span class="n">n_steps</span><span class="p">)</span>
+<span class="n">full_map</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_map</span><span class="p">[:</span><span class="mi">11</span><span class="p">,</span> <span class="p">:</span><span class="mi">11</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">delta_y</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">delta_x</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">coord_x</span> <span class="o">=</span> <span class="n">coord_y</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_step</span><span class="p">(</span><span class="n">delta_x</span><span class="p">,</span> <span class="n">delta_y</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">coord_x</span>
+    <span class="k">global</span> <span class="n">coord_y</span>
+    
+    <span class="n">coord_x</span> <span class="o">+=</span> <span class="n">delta_x</span>
+    <span class="n">coord_y</span> <span class="o">+=</span> <span class="n">delta_y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_map</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_trees</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">make_step</span><span class="p">(</span><span class="n">delta_x</span><span class="p">,</span> <span class="n">delta_y</span><span class="p">)</span>
+    <span class="n">num_trees</span> <span class="o">+=</span> <span class="n">full_map</span><span class="p">[</span><span class="n">coord_y</span><span class="p">,</span> <span class="n">coord_x</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">full_map</span><span class="p">[</span><span class="n">coord_y</span><span class="p">,</span> <span class="n">coord_x</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tree encountered at step </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. coords_xy = </span><span class="si">{</span><span class="n">coord_x</span><span class="p">,</span> <span class="n">coord_y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">full_map</span><span class="p">[</span><span class="n">coord_y</span><span class="p">,</span> <span class="n">coord_x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Num Trees = </span><span class="si">{</span><span class="n">num_trees</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-1">Part 1<a class="anchor-link" href="#Part-1"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/advent_of_code/2020/day3.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+<span class="n">sarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">full_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">sarr</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">sarr</span><span class="p">))</span>
+
+<span class="k">class</span> <span class="nc">Plane</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delta_x</span><span class="p">,</span> <span class="n">delta_y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coord_x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coord_y</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_x</span> <span class="o">=</span> <span class="n">delta_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_y</span> <span class="o">=</span> <span class="n">delta_y</span>
+        
+    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coord_x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coord_y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta_y</span>
+        
+        
+<span class="k">def</span> <span class="nf">calc_for_slope</span><span class="p">(</span><span class="n">delta_x</span><span class="p">,</span> <span class="n">delta_y</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Plane</span><span class="p">(</span><span class="n">delta_x</span><span class="p">,</span> <span class="n">delta_y</span><span class="p">)</span>
+    <span class="n">num_trees</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">while</span> <span class="n">p</span><span class="o">.</span><span class="n">coord_y</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">sarr</span><span class="p">)</span><span class="o">-</span><span class="n">delta_y</span><span class="p">:</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+        <span class="n">num_trees</span> <span class="o">+=</span> <span class="n">full_map</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">coord_y</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">coord_x</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">coord_y</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sarr</span><span class="p">)</span><span class="o">-</span><span class="n">delta_y</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;wow&#39;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Num Trees = </span><span class="si">{</span><span class="n">num_trees</span><span class="si">}</span><span class="s2"> for slope right=</span><span class="si">{</span><span class="n">delta_x</span><span class="si">}</span><span class="s2">, down=</span><span class="si">{</span><span class="n">delta_y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">num_trees</span>
+
+<span class="n">calc_for_slope</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-2">Part 2<a class="anchor-link" href="#Part-2"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">slopes</span> <span class="o">=</span> <span class="p">[</span>
+         <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+         <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+         <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+         <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+         <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+         <span class="p">]</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="p">{</span><span class="n">slope</span><span class="p">:</span><span class="n">calc_for_slope</span><span class="p">(</span><span class="o">*</span><span class="n">slope</span><span class="p">)</span> <span class="k">for</span> <span class="n">slope</span> <span class="ow">in</span> <span class="n">slopes</span><span class="p">}</span>
+
+<span class="n">ans</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">ans</span> <span class="o">*=</span> <span class="n">v</span>
+<span class="n">ans</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="day-4">day 4<a class="anchor-link" href="#day-4"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">batch</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;ecl:gry pid:860033327 eyr:2020 hcl:#fffffd</span>
+<span class="s2">byr:1937 iyr:2017 cid:147 hgt:183cm</span>
+
+<span class="s2">iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884</span>
+<span class="s2">hcl:#cfa07d byr:1929</span>
+
+<span class="s2">hcl:#ae17e1 iyr:2013</span>
+<span class="s2">eyr:2024</span>
+<span class="s2">ecl:brn pid:760753108 byr:1931</span>
+<span class="s2">hgt:179cm</span>
+
+<span class="s2">hcl:#cfa07d eyr:2025 pid:166559648</span>
+<span class="s2">iyr:2011 ecl:brn hgt:59in&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">passports</span> <span class="o">=</span> <span class="n">batch</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">passports</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">necessary_keys</span> <span class="o">=</span> <span class="s2">&quot;byr iyr eyr hgt hcl ecl pid&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">necessary_keys</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/advent_of_code/2020/day4.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">batch</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_valid</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">batch</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="n">p_elems</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; |</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">strip</span><span class="p">())]</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">p_elems</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span><span class="o">==</span><span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;wow&#39;</span><span class="p">)</span>
+            <span class="k">pass</span>
+
+    <span class="n">dpass</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">kv</span> <span class="ow">in</span> <span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">p_elems</span><span class="p">]:</span>
+        <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">kv</span>
+        <span class="n">dpass</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+<span class="c1">#     print(dpass)</span>
+    
+    <span class="n">missing_keys</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">necessary_keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dpass</span><span class="p">:</span>
+            <span class="n">missing_keys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+            
+            
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing_keys</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid, keys missing: </span><span class="si">{</span><span class="n">missing_keys</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+<span class="c1">#         print(f&quot;valid&quot;)</span>
+        <span class="n">n_valid</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="n">n_valid</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">validate_pass</span><span class="p">(</span><span class="n">dpass</span><span class="p">):</span>
+    
+    <span class="c1"># step 1: all keys are present</span>
+    <span class="n">missing_keys</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">necessary_keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dpass</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        
+    <span class="c1"># byr</span>
+    <span class="n">byr</span> <span class="o">=</span> <span class="n">dpass</span><span class="p">[</span><span class="s1">&#39;byr&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">byr</span><span class="p">)</span><span class="o">!=</span><span class="mi">4</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="n">byr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">byr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">byr</span><span class="o">&lt;</span><span class="mi">1920</span> <span class="ow">or</span> <span class="n">byr</span> <span class="o">&gt;</span><span class="mi">2002</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    
+    <span class="c1"># iyr</span>
+    <span class="n">iyr</span> <span class="o">=</span> <span class="n">dpass</span><span class="p">[</span><span class="s1">&#39;iyr&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">iyr</span><span class="p">)</span><span class="o">!=</span><span class="mi">4</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">iyr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">iyr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">iyr</span><span class="o">&lt;</span><span class="mi">2010</span> <span class="ow">or</span> <span class="n">iyr</span> <span class="o">&gt;</span><span class="mi">2020</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="c1"># eyr</span>
+    
+    <span class="n">eyr</span> <span class="o">=</span> <span class="n">dpass</span><span class="p">[</span><span class="s1">&#39;eyr&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">eyr</span><span class="p">)</span><span class="o">!=</span><span class="mi">4</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">eyr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">eyr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">eyr</span><span class="o">&lt;</span><span class="mi">2020</span> <span class="ow">or</span> <span class="n">eyr</span> <span class="o">&gt;</span><span class="mi">2030</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="c1"># hgt</span>
+    <span class="n">hgt</span> <span class="o">=</span> <span class="n">dpass</span><span class="p">[</span><span class="s1">&#39;hgt&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">hgt</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;cm&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="n">n</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">hgt</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]),</span> <span class="n">hgt</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s1">&#39;cm&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">150</span> <span class="ow">or</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">193</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">elif</span> <span class="n">unit</span> <span class="o">==</span> <span class="s1">&#39;in&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">59</span> <span class="ow">or</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">76</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">()</span>
+    
+    <span class="c1"># hcl</span>
+    <span class="n">hcl</span> <span class="o">=</span> <span class="n">dpass</span><span class="p">[</span><span class="s1">&#39;hcl&#39;</span><span class="p">]</span>
+    <span class="n">pat</span> <span class="o">=</span> <span class="s1">&#39;#[0-9a-f]</span><span class="si">{6}</span><span class="s1">&#39;</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">hcl</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="c1"># ecl</span>
+    <span class="n">ecl</span> <span class="o">=</span> <span class="n">dpass</span><span class="p">[</span><span class="s1">&#39;ecl&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">ecl</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;amb&#39;</span><span class="p">,</span> <span class="s1">&#39;blu&#39;</span><span class="p">,</span> <span class="s1">&#39;brn&#39;</span><span class="p">,</span> <span class="s1">&#39;gry&#39;</span><span class="p">,</span> <span class="s1">&#39;grn&#39;</span><span class="p">,</span> <span class="s1">&#39;hzl&#39;</span><span class="p">,</span> <span class="s1">&#39;oth&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="c1"># pid</span>
+    <span class="n">pid</span> <span class="o">=</span> <span class="n">dpass</span><span class="p">[</span><span class="s1">&#39;pid&#39;</span><span class="p">]</span>
+    <span class="n">pat</span> <span class="o">=</span> <span class="s1">&#39;\d</span><span class="si">{9}</span><span class="s1">&#39;</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="kc">True</span>
+    
+<span class="n">validate_pass</span><span class="p">({</span><span class="s1">&#39;hgt&#39;</span><span class="p">:</span> <span class="s1">&#39;176cm&#39;</span><span class="p">,</span> <span class="s1">&#39;iyr&#39;</span><span class="p">:</span> <span class="s1">&#39;2013&#39;</span><span class="p">,</span> <span class="s1">&#39;hcl&#39;</span><span class="p">:</span> <span class="s1">&#39;#fffffd&#39;</span><span class="p">,</span> <span class="s1">&#39;ecl&#39;</span><span class="p">:</span> <span class="s1">&#39;amb&#39;</span><span class="p">,</span> <span class="s1">&#39;byr&#39;</span><span class="p">:</span> <span class="s1">&#39;2000&#39;</span><span class="p">,</span> <span class="s1">&#39;eyr&#39;</span><span class="p">:</span> <span class="s1">&#39;2030&#39;</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="s1">&#39;89&#39;</span><span class="p">,</span> <span class="s1">&#39;pid&#39;</span><span class="p">:</span> <span class="s1">&#39;934693255&#39;</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">batch</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;eyr:1972 cid:100</span>
+<span class="s2">hcl:#18171d ecl:amb hgt:170 pid:186cm iyr:2018 byr:1926</span>
+
+<span class="s2">iyr:2019</span>
+<span class="s2">hcl:#602927 eyr:1967 hgt:170cm</span>
+<span class="s2">ecl:grn pid:012533040 byr:1946</span>
+
+<span class="s2">hcl:dab227 iyr:2012</span>
+<span class="s2">ecl:brn hgt:182cm pid:021572410 eyr:2020 byr:1992 cid:277</span>
+
+<span class="s2">hgt:59cm ecl:zzz</span>
+<span class="s2">eyr:2038 hcl:74454a iyr:2023</span>
+<span class="s2">pid:3556412378 byr:2007&quot;&quot;&quot;</span>
+<span class="n">n_valid</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">batch</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="c1"># build dict</span>
+    <span class="n">p_elems</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; |</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">strip</span><span class="p">())]</span>
+    <span class="n">dpass</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">kv</span> <span class="ow">in</span> <span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">p_elems</span><span class="p">]:</span>
+        <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">kv</span>
+        <span class="n">dpass</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+        
+    <span class="c1"># validate</span>
+    <span class="n">n_valid</span> <span class="o">+=</span> <span class="n">validate_pass</span><span class="p">(</span><span class="n">dpass</span><span class="p">)</span>
+        
+<span class="n">n_valid</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">batch</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;pid:087499704 hgt:74in ecl:grn iyr:2012 eyr:2030 byr:1980</span>
+<span class="s2">hcl:#623a2f</span>
+
+<span class="s2">eyr:2029 ecl:blu cid:129 byr:1989</span>
+<span class="s2">iyr:2014 pid:896056539 hcl:#a97842 hgt:165cm</span>
+
+<span class="s2">hcl:#888785</span>
+<span class="s2">hgt:164cm byr:2001 iyr:2015 cid:88</span>
+<span class="s2">pid:545766238 ecl:hzl</span>
+<span class="s2">eyr:2022</span>
+
+<span class="s2">iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719&quot;&quot;&quot;</span>
+<span class="n">n_valid</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">batch</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="c1"># build dict</span>
+    <span class="n">p_elems</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; |</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">strip</span><span class="p">())]</span>
+    <span class="n">dpass</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">kv</span> <span class="ow">in</span> <span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">p_elems</span><span class="p">]:</span>
+        <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">kv</span>
+        <span class="n">dpass</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+        
+    <span class="c1"># validate</span>
+    <span class="n">n_valid</span> <span class="o">+=</span> <span class="n">validate_pass</span><span class="p">(</span><span class="n">dpass</span><span class="p">)</span>
+        
+<span class="n">n_valid</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/advent_of_code/2020/day4.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">batch</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+<span class="n">n_valid</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">batch</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="c1"># build dict</span>
+    <span class="n">p_elems</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; |</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">strip</span><span class="p">())]</span>
+    <span class="n">dpass</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">kv</span> <span class="ow">in</span> <span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">p_elems</span><span class="p">]:</span>
+        <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">kv</span>
+        <span class="n">dpass</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+        
+    <span class="c1"># validate</span>
+    <span class="n">n_valid</span> <span class="o">+=</span> <span class="n">validate_pass</span><span class="p">(</span><span class="n">dpass</span><span class="p">)</span>
+        
+<span class="n">n_valid</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Day-5">Day 5<a class="anchor-link" href="#Day-5"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">vrb</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;lower&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arr</span><span class="p">[:</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">op</span> <span class="o">==</span> <span class="s1">&#39;upper&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">:]</span>
+   
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">locate_row</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Len = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span><span class="si">}</span><span class="s2">, expected 7&quot;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
+    
+    <span class="n">mapper</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="s1">&#39;upper&#39;</span><span class="p">}</span>
+    
+    <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="n">search_rows</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">mapper</span><span class="p">[</span><span class="n">op</span><span class="p">])</span>
+        
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">locate_row</span><span class="p">(</span><span class="s1">&#39;FBFBBFF&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">locate_col</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Len = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span><span class="si">}</span><span class="s2">, expected 3&quot;</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+    
+    <span class="n">mapper</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;L&#39;</span><span class="p">:</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span><span class="s1">&#39;upper&#39;</span><span class="p">}</span>
+    
+    <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+        <span class="n">cols</span> <span class="o">=</span> <span class="n">search_rows</span><span class="p">(</span><span class="n">cols</span><span class="p">,</span> <span class="n">mapper</span><span class="p">[</span><span class="n">op</span><span class="p">])</span>
+        
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">locate_col</span><span class="p">(</span><span class="s1">&#39;RLR&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="n">locate_row</span><span class="p">(</span><span class="n">seq</span><span class="p">[:</span><span class="mi">7</span><span class="p">])</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">locate_col</span><span class="p">(</span><span class="n">seq</span><span class="p">[</span><span class="mi">7</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;row&#39;</span><span class="p">:</span><span class="n">row</span><span class="p">,</span> <span class="s1">&#39;col&#39;</span><span class="p">:</span><span class="n">col</span><span class="p">,</span> <span class="s1">&#39;sid&#39;</span><span class="p">:</span><span class="n">row</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="n">col</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">:</span><span class="n">seq</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;FBFBBFFRLR&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;BFFFBBFRRR&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;FFFBBBFRRR&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;BBFFBBFRLL&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/advent_of_code/2020/day5.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">codes</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+<span class="n">myTicket</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">decode</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">codes</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;sid&#39;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">myTicket</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">seat_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)[</span><span class="s1">&#39;sid&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">codes</span><span class="p">]</span>
+<span class="n">lo</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">seat_ids</span><span class="p">)</span>
+<span class="n">hi</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">seat_ids</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seat_ids</span><span class="p">])</span> <span class="c1"># find empty seat</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Day-6">Day 6<a class="anchor-link" href="#Day-6"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;abc</span>
+
+<span class="s2">a</span>
+<span class="s2">b</span>
+<span class="s2">c</span>
+
+<span class="s2">ab</span>
+<span class="s2">ac</span>
+
+<span class="s2">a</span>
+<span class="s2">a</span>
+<span class="s2">a</span>
+<span class="s2">a</span>
+
+<span class="s2">b</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)))</span> <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">common_chars_in_group</span><span class="p">(</span><span class="n">people</span><span class="p">):</span>
+    <span class="n">common</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">people</span><span class="p">:</span>
+        <span class="n">common</span> <span class="o">&amp;=</span> <span class="nb">set</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">common</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">groups</span> <span class="o">=</span> <span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)]</span>
+<span class="n">commons</span> <span class="o">=</span> <span class="p">[</span><span class="n">common_chars_in_group</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">groups</span><span class="p">]</span>
+<span class="n">commons</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">commons</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/advent_of_code/2020/day6.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)))</span> <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">groups</span> <span class="o">=</span> <span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)]</span>
+<span class="n">commons</span> <span class="o">=</span> <span class="p">[</span><span class="n">common_chars_in_group</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">groups</span><span class="p">]</span>
+<span class="nb">sum</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">commons</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Day-7">Day 7<a class="anchor-link" href="#Day-7"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s_rules</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;light red bags contain 1 bright white bag, 2 muted yellow bags.</span>
+<span class="s2">dark orange bags contain 3 bright white bags, 4 muted yellow bags.</span>
+<span class="s2">bright white bags contain 1 shiny gold bag.</span>
+<span class="s2">muted yellow bags contain 2 shiny gold bags, 9 faded blue bags.</span>
+<span class="s2">shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags.</span>
+<span class="s2">dark olive bags contain 3 faded blue bags, 4 dotted black bags.</span>
+<span class="s2">vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.</span>
+<span class="s2">faded blue bags contain no other bags.</span>
+<span class="s2">dotted black bags contain no other bags.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/advent_of_code/2020/day7.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">s_rules</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;\.|</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">s_rules</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">if</span> <span class="n">l</span><span class="o">!=</span><span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="n">lines</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;bright green bags contain 4 drab green bags, 3 drab indigo bags, 5 dull blue bags&#39;,
+ &#39;posh violet bags contain 5 wavy white bags&#39;,
+ &#39;clear brown bags contain no other bags&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">graph</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;\.|</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">s_rules</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">if</span> <span class="n">l</span><span class="o">!=</span><span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">.&#39;</span><span class="p">)</span>
+    <span class="n">logics</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;bags|bag|,|contain&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">logics</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">logics</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+
+
+    <span class="n">target</span> <span class="o">=</span> <span class="n">logics</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">can_contain</span> <span class="o">=</span> <span class="n">logics</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">target</span><span class="p">,</span> <span class="n">can_contain</span>
+
+    <span class="n">graph</span><span class="p">[</span><span class="n">target</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">rule</span> <span class="ow">in</span> <span class="n">can_contain</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">rule</span> <span class="o">==</span> <span class="s1">&#39;no other&#39;</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nbr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">rule</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">rule</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+            <span class="n">graph</span><span class="p">[</span><span class="n">target</span><span class="p">][</span><span class="n">color</span><span class="p">]</span> <span class="o">=</span> <span class="n">nbr</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;shiny gold&#39;</span><span class="p">]</span> <span class="c1"># can contain</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;clear brown&#39;: 5, &#39;plaid fuchsia&#39;: 5, &#39;bright teal&#39;: 4, &#39;striped white&#39;: 1}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">inverted_graph</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">bag</span><span class="p">,</span> <span class="n">can_contain</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">can_contain</span><span class="p">:</span>
+        <span class="n">inverted_graph</span><span class="p">[</span><span class="n">color</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bag</span><span class="p">)</span>
+        
+<span class="n">inverted_graph</span><span class="p">[</span><span class="s1">&#39;shiny gold&#39;</span><span class="p">]</span> <span class="c1"># can be stored in </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;shiny orange&#39;,
+ &#39;mirrored crimson&#39;,
+ &#39;drab blue&#39;,
+ &#39;dark aqua&#39;,
+ &#39;mirrored purple&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">variations</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">current_path</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">current_path</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">current_path</span> <span class="o">=</span> <span class="n">color</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">current_path</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39; &lt;- </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s1">&#39;</span>
+        
+    <span class="k">if</span> <span class="n">outer_bags</span> <span class="o">:=</span> <span class="n">inverted_graph</span><span class="p">[</span><span class="n">color</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">bag</span> <span class="ow">in</span> <span class="n">outer_bags</span><span class="p">:</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">bag</span><span class="p">,</span> <span class="n">current_path</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">variations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_path</span><span class="p">)</span>
+    
+    
+
+<span class="n">dfs</span><span class="p">(</span><span class="s1">&#39;shiny gold&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">variations</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- mirrored gold &lt;- dark maroon&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- mirrored gold &lt;- dotted olive &lt;- bright silver&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- mirrored gold &lt;- faded chartreuse&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- plaid lime&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- posh lavender&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- muted violet &lt;- light lime &lt;- light gold &lt;- mirrored red&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- muted violet &lt;- light lime &lt;- bright gold&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- muted violet &lt;- light lime &lt;- dull lime &lt;- striped red &lt;- bright silver&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- muted violet &lt;- light lime &lt;- dull lime &lt;- striped red &lt;- plaid white &lt;- posh coral &lt;- dim aqua&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- muted violet &lt;- light lime &lt;- dull lime &lt;- drab olive &lt;- dotted salmon &lt;- wavy beige &lt;- striped cyan &lt;- wavy lavender&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- muted violet &lt;- dotted purple&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- muted violet &lt;- faded silver&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- dotted black&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- dim salmon &lt;- mirrored lavender &lt;- plaid yellow&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- faded orange&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- wavy gold &lt;- mirrored purple &lt;- bright lavender &lt;- posh purple &lt;- shiny purple &lt;- faded olive&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- wavy gold &lt;- mirrored purple &lt;- bright lavender &lt;- vibrant lavender &lt;- vibrant orange&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- wavy gold &lt;- mirrored purple &lt;- bright lavender &lt;- vibrant lavender &lt;- plaid teal&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- wavy gold &lt;- mirrored purple &lt;- bright lavender &lt;- dotted olive &lt;- bright silver&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- pale aqua &lt;- wavy gold &lt;- mirrored purple &lt;- bright lavender &lt;- dull gray &lt;- muted gray&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- dull salmon&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- light olive &lt;- shiny salmon &lt;- dull green&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- light olive &lt;- pale blue&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- light olive &lt;- vibrant purple&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- light olive &lt;- dark cyan &lt;- faded blue &lt;- plaid magenta&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- muted gray&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- striped aqua&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- dotted lavender &lt;- mirrored white &lt;- drab red&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- dotted lavender &lt;- dotted aqua&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- dotted lavender &lt;- mirrored lime &lt;- dim chartreuse &lt;- mirrored chartreuse&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- plaid gray &lt;- dotted lavender &lt;- mirrored lime &lt;- vibrant brown &lt;- clear turquoise &lt;- pale violet&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- shiny cyan &lt;- mirrored yellow&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- dull white &lt;- shiny magenta &lt;- muted salmon&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- dull white &lt;- muted plum &lt;- shiny gray &lt;- mirrored beige&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- dull white &lt;- muted plum &lt;- shiny gray &lt;- plaid tomato&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- dull white &lt;- mirrored lime &lt;- dim chartreuse &lt;- mirrored chartreuse&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- dull white &lt;- mirrored lime &lt;- vibrant brown &lt;- clear turquoise &lt;- pale violet&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- shiny beige&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- dull plum &lt;- clear gold&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- dull plum &lt;- wavy blue &lt;- dotted coral &lt;- dotted magenta&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- dull plum &lt;- light turquoise &lt;- dark yellow&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- dull plum &lt;- light turquoise &lt;- shiny tomato&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- bright turquoise&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- dull tomato&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- clear green&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- muted red &lt;- muted aqua&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- muted red &lt;- vibrant purple&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- pale indigo &lt;- muted red &lt;- dark cyan &lt;- faded blue &lt;- plaid magenta&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- posh beige &lt;- plaid chartreuse&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- plaid silver &lt;- posh beige &lt;- dotted violet&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- striped lime &lt;- faded magenta &lt;- dotted gray&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- drab maroon &lt;- striped lime &lt;- dark brown &lt;- muted coral &lt;- dotted black&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- dim gray &lt;- posh green &lt;- vibrant blue&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- dim gray &lt;- posh green &lt;- muted salmon&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- dim gray &lt;- posh green &lt;- muted orange&#39;,
+ &#39;shiny gold &lt;- shiny orange &lt;- dotted lime &lt;- faded plum &lt;- shiny cyan &lt;- mirrored yellow&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded salmon &lt;- muted lavender&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded salmon &lt;- muted violet &lt;- light lime &lt;- light gold &lt;- mirrored red&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded salmon &lt;- muted violet &lt;- light lime &lt;- bright gold&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded salmon &lt;- muted violet &lt;- light lime &lt;- dull lime &lt;- striped red &lt;- bright silver&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded salmon &lt;- muted violet &lt;- light lime &lt;- dull lime &lt;- striped red &lt;- plaid white &lt;- posh coral &lt;- dim aqua&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded salmon &lt;- muted violet &lt;- light lime &lt;- dull lime &lt;- drab olive &lt;- dotted salmon &lt;- wavy beige &lt;- striped cyan &lt;- wavy lavender&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded salmon &lt;- muted violet &lt;- dotted purple&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded salmon &lt;- muted violet &lt;- faded silver&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- dull lime &lt;- striped red &lt;- bright silver&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- dull lime &lt;- striped red &lt;- plaid white &lt;- posh coral &lt;- dim aqua&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- dull lime &lt;- drab olive &lt;- dotted salmon &lt;- wavy beige &lt;- striped cyan &lt;- wavy lavender&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- wavy violet &lt;- drab orange &lt;- wavy gray&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- wavy violet &lt;- dark yellow&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- wavy violet &lt;- faded olive&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- faded orange&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- striped beige &lt;- posh black &lt;- shiny lime&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- striped beige &lt;- dim tomato&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- dim beige &lt;- dark silver &lt;- dark blue&#39;,
+ &#39;shiny gold &lt;- mirrored crimson &lt;- dim beige &lt;- clear silver&#39;,
+ &#39;shiny gold &lt;- drab blue &lt;- wavy silver &lt;- shiny aqua&#39;,
+ &#39;shiny gold &lt;- dark aqua&#39;,
+ &#39;shiny gold &lt;- mirrored purple &lt;- bright lavender &lt;- posh purple &lt;- shiny purple &lt;- faded olive&#39;,
+ &#39;shiny gold &lt;- mirrored purple &lt;- bright lavender &lt;- vibrant lavender &lt;- vibrant orange&#39;,
+ &#39;shiny gold &lt;- mirrored purple &lt;- bright lavender &lt;- vibrant lavender &lt;- plaid teal&#39;,
+ &#39;shiny gold &lt;- mirrored purple &lt;- bright lavender &lt;- dotted olive &lt;- bright silver&#39;,
+ &#39;shiny gold &lt;- mirrored purple &lt;- bright lavender &lt;- dull gray &lt;- muted gray&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">variations</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>82</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/blog/2021/02/04/Advent-Of-Code.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
