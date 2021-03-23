@@ -7,16 +7,18 @@
 <title>Let’s crunch some Leet | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Let’s crunch some Leet" />
+<meta name="author" content="David Dobrinskiy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://ddobrinskiy.github.io/blog/2021/03/22/Leetcode-Algorythms.html" />
-<meta property="og:url" content="https://ddobrinskiy.github.io/blog/2021/03/22/Leetcode-Algorythms.html" />
+<meta name="description" content="Working on mock algos from https://leetcode.com/problemset/algorithms/." />
+<meta property="og:description" content="Working on mock algos from https://leetcode.com/problemset/algorithms/." />
+<link rel="canonical" href="https://ddobrinskiy.github.io/blog/leetcode/2021/03/22/Leetcode-Algorythms.html" />
+<meta property="og:url" content="https://ddobrinskiy.github.io/blog/leetcode/2021/03/22/Leetcode-Algorythms.html" />
 <meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://ddobrinskiy.github.io/blog/images/LeetCode_logo_black.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-03-22T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","url":"https://ddobrinskiy.github.io/blog/2021/03/22/Leetcode-Algorythms.html","@type":"BlogPosting","headline":"Let’s crunch some Leet","dateModified":"2021-03-22T00:00:00-05:00","datePublished":"2021-03-22T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ddobrinskiy.github.io/blog/2021/03/22/Leetcode-Algorythms.html"},"@context":"https://schema.org"}</script>
+{"description":"Working on mock algos from https://leetcode.com/problemset/algorithms/.","url":"https://ddobrinskiy.github.io/blog/leetcode/2021/03/22/Leetcode-Algorythms.html","@type":"BlogPosting","headline":"Let’s crunch some Leet","dateModified":"2021-03-22T00:00:00-05:00","datePublished":"2021-03-22T00:00:00-05:00","author":{"@type":"Person","name":"David Dobrinskiy"},"image":"https://ddobrinskiy.github.io/blog/images/LeetCode_logo_black.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://ddobrinskiy.github.io/blog/leetcode/2021/03/22/Leetcode-Algorythms.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ddobrinskiy.github.io/blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,9 +73,11 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Let&#39;s crunch some Leet</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-03-22T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Let&#39;s crunch some Leet</h1><p class="page-description">Working on mock algos from  https://leetcode.com/problemset/algorithms/.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-03-22T00:00:00-05:00" itemprop="datePublished">
         Mar 22, 2021
-      </time>
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">David Dobrinskiy</span></span>
        • <span class="read-time" title="Estimated read time">
     
     
@@ -81,6 +85,13 @@ window.onload = wrap_img;
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#leetcode">leetcode</a>
+        
+      
+      </p>
     
 
     
@@ -108,7 +119,13 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#longest-substring-without-repeating-characters">longest-substring-without-repeating-characters </a></li>
+<li class="toc-entry toc-h2"><a href="#7.-Reverse-Integer">7. Reverse Integer </a></li>
+<li class="toc-entry toc-h2"><a href="#5.-Longest-Palindromic-Substring">5. Longest Palindromic Substring </a></li>
+<li class="toc-entry toc-h2"><a href="#21.-Merge-Two-Sorted-Lists">21. Merge Two Sorted Lists </a></li>
+<li class="toc-entry toc-h2"><a href="#4.-Median-of-Two-Sorted-Arrays">4. Median of Two Sorted Arrays </a></li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -117,9 +134,13 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="longest-substring-without-repeating-characters">longest-substring-without-repeating-characters<a class="anchor-link" href="#longest-substring-without-repeating-characters"> </a></h2><p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">https://leetcode.com/problems/longest-substring-without-repeating-characters/</a></p>
+<h2 id="longest-substring-without-repeating-characters">
+<a class="anchor" href="#longest-substring-without-repeating-characters" aria-hidden="true"><span class="octicon octicon-link"></span></a>longest-substring-without-repeating-characters<a class="anchor-link" href="#longest-substring-without-repeating-characters"> </a>
+</h2>
+<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">https://leetcode.com/problems/longest-substring-without-repeating-characters/</a></p>
 
 </div>
 </div>
@@ -135,7 +156,7 @@ window.onload = wrap_img;
     <span class="n">got</span> <span class="o">=</span> <span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">foo</span><span class="p">(</span><span class="n">input_</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">got</span> <span class="o">!=</span> <span class="n">want</span><span class="p">:</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;got=&#39;</span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2">&#39;, want=&#39;</span><span class="si">{</span><span class="n">want</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"got='</span><span class="si">{</span><span class="n">got</span><span class="si">}</span><span class="s2">', want='</span><span class="si">{</span><span class="n">want</span><span class="si">}</span><span class="s2">'"</span>
         <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 </pre></div>
 
@@ -186,12 +207,12 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="s2">&quot;pwwkew&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;wwww&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;abcabcbb&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;abcdexfbdgcbb&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="s2">"pwwkew"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">" "</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">"wwww"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">"abcabcbb"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">"abcdexfbdgcbb"</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -243,12 +264,12 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="s2">&quot;abcdexfbdgcbb&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;pwwkew&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;wwww&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;abcabcbb&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="s2">"abcdexfbdgcbb"</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">"pwwkew"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">" "</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">"wwww"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">"abcabcbb"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -258,9 +279,13 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="7.-Reverse-Integer">7. Reverse Integer<a class="anchor-link" href="#7.-Reverse-Integer"> </a></h2><p>Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range $[-2^{31}, 2^{31} - 1]$, then return 0.</p>
+<h2 id="7.-Reverse-Integer">
+<a class="anchor" href="#7.-Reverse-Integer" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Reverse Integer<a class="anchor-link" href="#7.-Reverse-Integer"> </a>
+</h2>
+<p>Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range $[-2^{31}, 2^{31} - 1]$, then return 0.</p>
 <p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>
 
 </div>
@@ -432,9 +457,12 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="5.-Longest-Palindromic-Substring">5. Longest Palindromic Substring<a class="anchor-link" href="#5.-Longest-Palindromic-Substring"> </a></h2>
+<h2 id="5.-Longest-Palindromic-Substring">
+<a class="anchor" href="#5.-Longest-Palindromic-Substring" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Longest Palindromic Substring<a class="anchor-link" href="#5.-Longest-Palindromic-Substring"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -457,7 +485,7 @@ window.onload = wrap_img;
                     <span class="k">return</span> <span class="n">candidate</span>
             <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
             
-        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">""</span>
 
     <span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -483,7 +511,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>  <span class="c1"># Memory to remember a palindrome</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="s1">''</span>  <span class="c1"># Memory to remember a palindrome</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>  <span class="c1"># i = start, O = n</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">i</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>  <span class="c1"># j = end, O = n^2</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="p">:</span>  <span class="c1"># To reduce time</span>
@@ -510,7 +538,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>  <span class="c1"># Memory to remember a palindrome</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="s1">''</span>  <span class="c1"># Memory to remember a palindrome</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>  <span class="c1"># i = start, O = n</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">i</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>  <span class="c1"># j = end, O = n^2</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="p">:</span>  <span class="c1"># To reduce time</span>
@@ -552,13 +580,13 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="s2">&quot;babad&quot;</span><span class="p">,</span> <span class="s2">&quot;bab&quot;</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="s2">"babad"</span><span class="p">,</span> <span class="s2">"bab"</span><span class="p">)</span>
 
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;cbbd&quot;</span><span class="p">,</span> <span class="s2">&quot;bb&quot;</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">"cbbd"</span><span class="p">,</span> <span class="s2">"bb"</span><span class="p">)</span>
 
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span>
 
-<span class="n">test</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -581,10 +609,10 @@ window.onload = wrap_img;
             <span class="nb">print</span><span class="p">(</span><span class="n">cur</span><span class="p">)</span>
         <span class="k">return</span>
     
-    <span class="n">generate</span><span class="p">(</span><span class="n">cur</span> <span class="o">+</span> <span class="s2">&quot;(&quot;</span><span class="p">,</span> <span class="nb">open</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">closed</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">generate</span><span class="p">(</span><span class="n">cur</span> <span class="o">+</span> <span class="s2">"("</span><span class="p">,</span> <span class="nb">open</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">closed</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="nb">open</span> <span class="o">&gt;</span> <span class="n">closed</span><span class="p">:</span>
-        <span class="n">generate</span><span class="p">(</span><span class="n">cur</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="nb">open</span><span class="p">,</span> <span class="n">closed</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">generate</span><span class="p">(</span><span class="n">cur</span> <span class="o">+</span> <span class="s2">")"</span><span class="p">,</span> <span class="nb">open</span><span class="p">,</span> <span class="n">closed</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -601,7 +629,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">generate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">generate</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -618,7 +646,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">generate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">generate</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -635,7 +663,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">generate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">generate</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -645,9 +673,12 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="21.-Merge-Two-Sorted-Lists">21. Merge Two Sorted Lists<a class="anchor-link" href="#21.-Merge-Two-Sorted-Lists"> </a></h2>
+<h2 id="21.-Merge-Two-Sorted-Lists">
+<a class="anchor" href="#21.-Merge-Two-Sorted-Lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>21. Merge Two Sorted Lists<a class="anchor-link" href="#21.-Merge-Two-Sorted-Lists"> </a>
+</h2>
 <pre><code>Runtime: 40 ms, faster than 49.45% of Python3 online submissions for Merge Two Sorted Lists.
 Memory Usage: 14.3 MB, less than 33.73% of Python3 online submissions for Merge Two Sorted Lists.</code></pre>
 
@@ -666,7 +697,7 @@ Memory Usage: 14.3 MB, less than 33.73% of Python3 online submissions for Merge 
         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="nb">next</span>
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">val</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">next</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">val</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">next</span><span class="si">}</span><span class="s2">"</span>
         
 <span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     
@@ -688,7 +719,7 @@ Memory Usage: 14.3 MB, less than 33.73% of Python3 online submissions for Merge 
     
         
     <span class="k">def</span> <span class="nf">mergeTwoLists</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l1</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">l2</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
-        <span class="c1"># DON&#39;T FORGET TO DROP FIRST NODE</span>
+        <span class="c1"># DON'T FORGET TO DROP FIRST NODE</span>
         <span class="n">answer_root</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
         <span class="n">answer</span> <span class="o">=</span> <span class="n">answer_root</span>
 
@@ -795,8 +826,8 @@ Memory Usage: 14.3 MB, less than 33.73% of Python3 online submissions for Merge 
 <span class="n">answer</span> <span class="o">=</span> <span class="n">answer</span><span class="o">.</span><span class="n">next</span>
     
 <span class="nb">print</span><span class="p">(</span><span class="n">answer_root</span><span class="p">)</span>    
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;l1:&quot;</span><span class="p">,</span> <span class="n">l1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;l2:&quot;</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"l1:"</span><span class="p">,</span> <span class="n">l1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"l2:"</span><span class="p">,</span> <span class="n">l2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -806,13 +837,17 @@ Memory Usage: 14.3 MB, less than 33.73% of Python3 online submissions for Merge 
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.-Median-of-Two-Sorted-Arrays">4. Median of Two Sorted Arrays<a class="anchor-link" href="#4.-Median-of-Two-Sorted-Arrays"> </a></h2>
+<h2 id="4.-Median-of-Two-Sorted-Arrays">
+<a class="anchor" href="#4.-Median-of-Two-Sorted-Arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Median of Two Sorted Arrays<a class="anchor-link" href="#4.-Median-of-Two-Sorted-Arrays"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
 <pre><code>Success 
@@ -897,7 +932,15 @@ median if n is even =  $\frac{X_i+X_j}{2}$, <code>i = n/2, j=n/2+1</code></p>
 
 
 
-  </div><a class="u-url" href="/blog/2021/03/22/Leetcode-Algorythms.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="ddobrinskiy/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/leetcode/2021/03/22/Leetcode-Algorythms.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
