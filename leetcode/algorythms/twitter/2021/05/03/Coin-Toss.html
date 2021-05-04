@@ -7,16 +7,17 @@
 <title>Find the two-headed coin | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Find the two-headed coin" />
+<meta name="author" content="David Dobrinskiy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://ddobrinskiy.github.io/blog/2021/05/03/Coin-Toss.html" />
-<meta property="og:url" content="https://ddobrinskiy.github.io/blog/2021/05/03/Coin-Toss.html" />
+<meta name="description" content="simulating a problem from twitter" />
+<meta property="og:description" content="simulating a problem from twitter" />
+<link rel="canonical" href="https://ddobrinskiy.github.io/blog/leetcode/algorythms/twitter/2021/05/03/Coin-Toss.html" />
+<meta property="og:url" content="https://ddobrinskiy.github.io/blog/leetcode/algorythms/twitter/2021/05/03/Coin-Toss.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-05-03T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","url":"https://ddobrinskiy.github.io/blog/2021/05/03/Coin-Toss.html","@type":"BlogPosting","headline":"Find the two-headed coin","dateModified":"2021-05-03T00:00:00-05:00","datePublished":"2021-05-03T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ddobrinskiy.github.io/blog/2021/05/03/Coin-Toss.html"},"@context":"https://schema.org"}</script>
+{"description":"simulating a problem from twitter","url":"https://ddobrinskiy.github.io/blog/leetcode/algorythms/twitter/2021/05/03/Coin-Toss.html","@type":"BlogPosting","headline":"Find the two-headed coin","dateModified":"2021-05-03T00:00:00-05:00","datePublished":"2021-05-03T00:00:00-05:00","author":{"@type":"Person","name":"David Dobrinskiy"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ddobrinskiy.github.io/blog/leetcode/algorythms/twitter/2021/05/03/Coin-Toss.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ddobrinskiy.github.io/blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,16 +72,31 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Find the two-headed coin</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-03T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Find the two-headed coin</h1><p class="page-description">simulating a problem from twitter</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-03T00:00:00-05:00" itemprop="datePublished">
         May 3, 2021
-      </time>
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">David Dobrinskiy</span></span>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#leetcode">leetcode</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#algorythms">algorythms</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#twitter">twitter</a>
+        
+      
+      </p>
     
 
     
@@ -108,7 +124,11 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Problem">Problem </a></li>
+<li class="toc-entry toc-h2"><a href="#Solution">Solution </a></li>
+<li class="toc-entry toc-h1"><a href="#Now-let's-run-our-experiment-10-000-times-and-see-how-often-we-guess-correctly:">Now let&#39;s run our experiment 10 000 times and see how often we guess correctly: </a></li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -117,9 +137,25 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution"> </a></h2><p>This seems to work ~60%.</p>
+<h2 id="Problem">
+<a class="anchor" href="#Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem<a class="anchor-link" href="#Problem"> </a>
+</h2>
+<p>There are 10 coins sitting on a table "heads" up. Among them, 9 are fair coins while 1 of them has a Head on the two sides. You are allowed to 10 flips: can you find a strategy that finds the two-headed coins more than ~36% of the time? #maths #probability #riddle</p>
+<p><a href="https://twitter.com/thienan496/status/1385111543193296897?s=20">https://twitter.com/thienan496/status/1385111543193296897?s=20</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Solution">
+<a class="anchor" href="#Solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solution<a class="anchor-link" href="#Solution"> </a>
+</h2>
+<p>This seems to work ~60%.</p>
 
 <pre><code>1) Pick the first coin and keep tossing it until it shows tails; if it does, move on to the next coin.
 2) hen we run out of tosses, if we've tossed a coin that never showed us tails, make that our guess.
@@ -137,23 +173,8 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 </pre></div>
 
     </div>
@@ -174,9 +195,9 @@ window.onload = wrap_img;
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_fair</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         
         <span class="k">if</span> <span class="n">is_fair</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'H'</span><span class="p">,</span> <span class="s1">'T'</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'H'</span><span class="p">,</span> <span class="s1">'H'</span><span class="p">]</span>
         
     <span class="k">def</span> <span class="nf">toss</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sides</span><span class="p">)</span>
@@ -225,7 +246,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>([&#39;H&#39;, &#39;T&#39;], True)</pre>
+<pre>(['H', 'T'], True)</pre>
 </div>
 
 </div>
@@ -245,7 +266,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">observations</span> <span class="o">=</span> <span class="p">[</span><span class="n">c1</span><span class="o">.</span><span class="n">toss</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100_000</span><span class="p">)]</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">observations</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;T&#39;</span><span class="p">],</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">],</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">'T'</span><span class="p">],</span> <span class="n">results</span><span class="p">[</span><span class="s1">'H'</span><span class="p">],</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -267,7 +288,7 @@ window.onload = wrap_img;
     <span class="n">bag</span> <span class="o">=</span> <span class="p">[</span><span class="n">Coin</span><span class="p">(</span><span class="n">is_fair</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">)]</span>
     <span class="n">bag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Coin</span><span class="p">(</span><span class="n">is_fair</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 
-    <span class="c1"># now shuffle the coins, so we don&#39;t know which one if fake</span>
+    <span class="c1"># now shuffle the coins, so we don't know which one if fake</span>
     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">bag</span><span class="p">)</span>
     
     <span class="c1"># enumerate our bag</span>
@@ -337,18 +358,18 @@ window.onload = wrap_img;
         <span class="n">observations</span><span class="p">[</span><span class="n">current_coin_index</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
         <span class="n">COIN_TOSSES</span> <span class="o">-=</span> <span class="mi">1</span>
 
-        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tossing...&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s2">"Tossing..."</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">'T'</span><span class="p">:</span>
             <span class="n">bag</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">current_coin_index</span><span class="p">)</span>
 
             <span class="n">current_coin_index</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">current_coin_index</span><span class="p">,</span> <span class="n">bag</span><span class="p">[</span><span class="n">current_coin_index</span><span class="p">])</span>
                 
-    <span class="c1"># if we&#39;ve tossed a coin that never showed us tails, make that our guess.</span>
+    <span class="c1"># if we've tossed a coin that never showed us tails, make that our guess.</span>
     <span class="n">guess</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">for</span> <span class="n">coin_index</span><span class="p">,</span> <span class="n">toss_results</span> <span class="ow">in</span> <span class="n">observations</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">toss_results</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;H&#39;</span><span class="p">}:</span>
+        <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">toss_results</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="s1">'H'</span><span class="p">}:</span>
             <span class="k">return</span> <span class="n">coin_index</span>
 
     <span class="c1"># Otherwise, guess at random from all the untested coins       </span>
@@ -364,9 +385,12 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Now-let's-run-our-experiment-10-000-times-and-see-how-often-we-guess-correctly:">Now let's run our experiment 10 000 times and see how often we guess correctly:<a class="anchor-link" href="#Now-let's-run-our-experiment-10-000-times-and-see-how-often-we-guess-correctly:"> </a></h1>
+<h1 id="Now-let's-run-our-experiment-10-000-times-and-see-how-often-we-guess-correctly:">
+<a class="anchor" href="#Now-let's-run-our-experiment-10-000-times-and-see-how-often-we-guess-correctly:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Now let's run our experiment 10 000 times and see how often we guess correctly:<a class="anchor-link" href="#Now-let's-run-our-experiment-10-000-times-and-see-how-often-we-guess-correctly:"> </a>
+</h1>
 </div>
 </div>
 </div>
@@ -457,7 +481,8 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Huzzaa! The algo gets it right about <strong>60%</strong> of the time, which is 2x improvement on original conditions</p>
 
@@ -468,7 +493,15 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/blog/2021/05/03/Coin-Toss.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="ddobrinskiy/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/leetcode/algorythms/twitter/2021/05/03/Coin-Toss.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
