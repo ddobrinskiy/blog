@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Title",
+            "title": "Calculating Pi with fractions",
             "content": ". $ pi = frac{4}{1+ frac{1^2}{2 + recursion(n)}}$ . import numpy as np def frac_one(n:int, i:int=0): i += 1 n -= 1 nominator = 1+2*i if n == 0: return 1 else: return 2 + (1+2*i)**2/frac_one(n, i) def frac_inf(n:int, i:int=0): i += 1 n -= 1 nominator = 1+2*i if n == 0: return np.inf else: return 2 + (1+2*i)**2/frac_inf(n, i) . def pi_approx(func, n_iters): return 4 / (1 + 1/func(n_iters)) . def pi_mixed(n_iters): a = pi_approx(frac_one, n_iters) b = pi_approx(frac_inf, n_iters) return (a+b)/2 . import sys max_recursion = int(sys.getrecursionlimit()*.98) max_recursion . 2940 . pi_approx(frac_one, max_recursion) . 3.141932789654053 . pi_approx(frac_inf, max_recursion) . 3.141252517545209 . print(f&quot;&quot;&quot; At recursion depth of {max_recursion} the approximation error is: * {(np.pi - pi_approx(frac_one, max_recursion))/np.pi:.3%} for frac_one * {(np.pi - pi_approx(frac_inf, max_recursion))/np.pi:.3%} for frac_inf * {(np.pi - pi_mixed(max_recursion))/np.pi:.12%} for pi_mixed &quot;&quot;&quot; ) . At recursion depth of 2940 the approximation error is: * -0.011% for frac_one * 0.011% for frac_inf * -0.000000000313% for pi_mixed .",
-            "url": "https://ddobrinskiy.github.io/blog/2021/05/05/Infinite-Pi-Fraction.html",
-            "relUrl": "/2021/05/05/Infinite-Pi-Fraction.html",
+            "url": "https://ddobrinskiy.github.io/blog/algorythms/twitter/2021/05/05/Infinite-Pi-Fraction.html",
+            "relUrl": "/algorythms/twitter/2021/05/05/Infinite-Pi-Fraction.html",
             "date": " • May 5, 2021"
         }
         
