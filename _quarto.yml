@@ -14,6 +14,9 @@ website:
         href: https://github.com/ddobrinskiy
       - icon: ens
         href: https://app.ens.domains/name/ddobrinskiy.eth
+  repo-url: https://github.com/ddobrinskiy/blog
+  repo-branch: master	
+  repo-actions: [source]
 
 format:
   html:
