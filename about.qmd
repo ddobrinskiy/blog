@@ -1,0 +1,53 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/daviddobrinskiy
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/ddobrinskiy
+    - icon: github
+      text: Github
+      href: https://github.com/ddobrinskiy
+    - icon: ens 
+      text: ENS
+      href: https://app.ens.domains/name/ddobrinskiy.eth
+---
+
+
+## Current gig
+
+Product Data Analyst @ a crypto-exchange
+
+## Stuff I'm not bad at
+
+* python
+
+* Pandas, SQL & other data-crunching
+
+* data-viz
+
+* Analytics + Tracing/Observability
+
+* ML
+
+* googling stuff
+
+* stack-overflow
+
+* bullshit-bingo (AI, git, docker, k8s deployement, teamwork, leadership, tbc)
+
+## Stuff I want to be better at
+
+* DL
+
+* fast.ai
+
+* JuliaLang [^1]
+
+[1]: because why not
+
