@@ -14,7 +14,11 @@ website:
         href: https://github.com/ddobrinskiy
       - icon: ens
         href: https://app.ens.domains/name/ddobrinskiy.eth
+
 format:
   html:
     theme: cosmo
     css: styles.css
+
+execute:
+  freeze: auto
