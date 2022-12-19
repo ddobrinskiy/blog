@@ -1,0 +1,6 @@
+title: Show-Code
+author: Brian Ward
+version: 0.1.0
+contributes:
+  shortcodes:
+    - show-code.lua
