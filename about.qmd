@@ -13,9 +13,6 @@ about:
     - icon: github
       text: Github
       href: https://github.com/ddobrinskiy
-    - icon: ens 
-      text: ENS
-      href: https://app.ens.domains/name/ddobrinskiy.eth
 ---
 
 
