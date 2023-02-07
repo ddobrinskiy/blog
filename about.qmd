@@ -13,12 +13,26 @@ about:
     - icon: github
       text: Github
       href: https://github.com/ddobrinskiy
+    - icon: email 
+      text: Email
+      href: mailto:david@dobrinskiy.me
+    - icon: telegram 
+      text: Telegram
+      href: https://t.me/dzlob
+
 ---
 
+* Linkedin: [linkedin.com/in/ddobrinskiy](https://www.linkedin.com/in/ddobrinskiy/)
+* Email: `david@dobrinskiy.me`
+* Telegram: [t.me/dzlob](https://t.me/dzlob)
 
 ## Current gig
 
-Product Data Analyst @ a crypto-exchange
+I'm open to work. If you have a great challenge around data analytics/software engineering, drop me a line at:
+
+* Linkedin: [linkedin.com/in/ddobrinskiy](https://www.linkedin.com/in/ddobrinskiy/)
+* Email: `david@dobrinskiy.me`
+* Telegram: [t.me/dzlob](https://t.me/dzlob)
 
 ## Stuff I'm not bad at
 
