@@ -3,6 +3,8 @@ project:
 
 website:
   title: "David's Blog"
+  twitter-card: true
+  open-graph: true
   navbar:
     right:
       - about.qmd
