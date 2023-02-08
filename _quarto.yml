@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "David's Blog"
+  title: "ddobrinskiy's Blog"
   twitter-card: true
   open-graph: true
   navbar:
